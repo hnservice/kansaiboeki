@@ -1,0 +1,110 @@
+/* ==========================================================================
+   1. 基本設定
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap');
+
+html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    overflow: hidden; font-family: 'Noto Sans JP', sans-serif;
+    background-color: #000;
+}
+
+/* ==========================================================================
+   2. ヘッダー（視認性向上・英字付きメニュー）
+   ========================================================================== */
+header {
+    position: fixed; top: 0; width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 30px 60px; z-index: 1000;
+    box-sizing: border-box;
+    /* ★ポイント：最上部に影を敷いてメニューの白を際立たせる */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+}
+
+header h1 {
+    color: #000000; font-size: 1.7rem; font-weight: 900; margin: 0; letter-spacing: 0.1em;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+nav ul { display: flex; list-style: none; gap: 40px; margin: 0; padding: 0; }
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: column; /* 英字と漢字を縦に並べる */
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* ★ポイント：メニューの上に表示する小さな緑の英字 */
+nav a::before {
+    content: attr(data-en); /* HTMLのdata-en属性を読み込む */
+    font-size: 0.6rem;
+    color: #28a745; /* 看板の緑色 */
+    letter-spacing: 0.2em;
+    margin-bottom: 4px;
+    font-family: 'Arial', sans-serif;
+}
+
+nav a:hover {
+    color: #28a745; /* 触れると全体が緑に光る */
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. メインスライド
+   ========================================================================== */
+.main-swiper { width: 100vw; height: 100vh; }
+.main-swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+.overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: 1;
+}
+
+.main-copy { position: absolute; bottom: 35%; left: 60px; z-index: 10; color: #fff; }
+.en-title { color: #28a745; font-weight: 700; letter-spacing: 0.4em; display: block; margin-bottom: 10px; font-size: 1.1rem; }
+.main-copy h2 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); font-weight: 700; line-height: 1.25; text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6); }
+
+/* ==========================================================================
+   4. フッター（ニュース ＆ 住所）
+   ========================================================================== */
+.info-footer {
+    position: absolute; right: 60px; bottom: 40px;
+    z-index: 500; text-align: right; color: #fff;
+}
+
+/* ニュースエリア */
+.news-area {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    width: 450px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.news-header {
+    color: #28a745; font-weight: 700; font-size: 0.75rem;
+    margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px; display: inline-block;
+}
+
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-list li {
+    font-size: 0.85rem; color: #fff; margin-bottom: 6px; line-height: 1.4;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.news-list li:last-child { margin-bottom: 0; border-bottom: none; }
+.news-date { color: #ccc; font-size: 0.75rem; margin-right: 15px; font-family: monospace; }
+
+/* 住所エリア */
+.address-box { font-size: 0.9rem; text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9); }
+.location, .contact-group p { margin: 0; letter-spacing: 0.05em; }
+.contact-group p { font-size: 1.05rem; font-weight: 700; margin-top: 5px; }
+.label { color: #28a745; font-weight: 700; font-size: 0.8rem; }

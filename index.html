@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関西貿易 株式会社 | 高価買取・輸出貿易</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>関西貿易 株式会社</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-en="HOME">ホーム</a></li>
+                <li><a href="#" data-en="COMPANY">会社概要</a></li>
+                <li><a href="#" data-en="BUSINESS">業務内容</a></li>
+                <li><a href="#" data-en="CONTACT">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="overlay"></div>
+                    <img src="IMG_0040.JPG" alt="関西貿易 拠点">
+                    <div class="main-copy">
+                        <span class="en-title">KANSAI TRADING</span>
+                        <h2>その価値、世界へ。</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="overlay"></div>
+                    <img src="IMG_0035.JPG" alt="確かな検品">
+                    <div class="main-copy">
+                        <span class="en-title">HIGH QUALITY</span>
+                        <h2>確かな検品と信頼。</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="overlay"></div>
+                    <img src="IMG_0050.JPG" alt="輸出・物流">
+                    <div class="main-copy">
+                        <span class="en-title">GLOBAL NETWORK</span>
+                        <h2>明日を繋ぐ架け橋に。</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="info-footer">
+            <div class="news-area">
+                <div class="news-header">What's New</div>
+                <ul class="news-list">
+                    <li><span class="news-date">2026.02.26</span>ホームページを公開いたしました。</li>
+                    <li><span class="news-date">2026.03.01</span>買取品目を更新。高価買取強化中です！</li>
+                    <li><span class="news-date">2026.03.10</span>【重要】臨時休業のお知らせ</li>
+                    <li><span class="news-date">2026.03.15</span>新規取引先募集中です。</li>
+                </ul>
+            </div>
+
+            <div class="address-box">
+                <p class="location">〒569-0844　大阪府高槻市柱本4丁目25-1</p>
+                <div class="contact-group">
+                    <p><span class="label">TEL：</span>072-668-2355　<span class="label">FAX：</span>072-668-2345</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const mainSwiper = new Swiper('.main-swiper', {
+            loop: true,
+            effect: 'fade',
+            autoplay: { delay: 4500, disableOnInteraction: false },
+            speed: 2500,
+        });
+    </script>
+</body>
+</html>
