@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 | 関西貿易 株式会社</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 会社概要ページ専用の追加スタイル */
+        body {
+            overflow: auto; /* 下層ページなのでスクロールを許可 */
+            background-color: #fff; /* コンテンツ部分は白背景で信頼感を */
+        }
+        
+        /* ヒーローエリア（トップのSwiperの質感を引き継ぐ） */
+        .page-hero {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+            background: #000;
+        }
+        .page-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        .page-hero .main-copy {
+            bottom: 20%; /* 少し位置を調整 */
+        }
+
+        /* コンテンツセクション */
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 100px 60px;
+            background: #fff;
+        }
+
+        /* 共通見出し：トップページの en-title のスタイルを継承 */
+        .section-label {
+            color: #28a745;
+            font-weight: 700;
+            letter-spacing: 0.4em;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        /* 代表挨拶：ゆったりとした高級感 */
+        .message-container {
+            line-height: 2.4;
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 120px;
+            word-break: break-all;
+        }
+        .ceo-name {
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 50px;
+            color: #000;
+        }
+
+        /* 企業情報テーブル：スタイリッシュなライン */
+        .company-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+        .company-table th {
+            width: 30%;
+            padding: 25px 0;
+            text-align: left;
+            border-bottom: 1px solid #28a745; /* 緑のライン */
+            color: #28a745;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        .company-table td {
+            padding: 25px 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        /* 下層用フッター */
+        .page-footer {
+            background: #111;
+            padding: 80px 60px;
+            color: #fff;
+            text-align: center;
+        }
+        .page-footer .address-box {
+            text-align: center;
+            text-shadow: none; /* 下層フッターは背景が暗いので影なしでスッキリ */
+        }
+
+        @media screen and (max-width: 768px) {
+            .content-section { padding: 60px 20px; }
+            .section-title { font-size: 1.8rem; }
+            .company-table th, .company-table td { display: block; width: 100%; padding: 10px 0; }
+            .company-table th { border: none; padding-top: 20px; }
+            .page-footer { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>関西貿易 株式会社</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-en="HOME">ホーム</a></li>
+                <li><a href="company.html" data-en="COMPANY">会社概要</a></li>
+                <li><a href="#" data-en="BUSINESS">業務内容</a></li>
+                <li><a href="#" data-en="CONTACT">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-hero">
+            <div class="overlay"></div>
+            <img src="IMG_0040.JPG" alt="関西貿易 会社概要">
+            <div class="main-copy">
+                <span class="en-title">COMPANY PROFILE</span>
+                <h2>会社概要</h2>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <div class="message-container">
+                <span class="section-label">MESSAGE</span>
+                <h3 class="section-title">代表挨拶</h3>
+                <p><strong>「国境を越え、価値を繋ぐ。信頼の架け橋として。」</strong></p>
+                <p>私、西脇健治は日本という地で新たな挑戦を始めました。当初は言葉の壁に直面することもありましたが、「誠実に、誠意を持って」という想いを胸に、一歩ずつ信頼を積み重ね、今日まで歩んでまいりました。</p>
+                <p>日本で培った技術と信頼、そしてグローバルな視点を活かし、お客様の大切な資産を次なる価値へと繋げていく。それが私たちの使命です。</p>
+                <p>従業員15名、一丸となって皆様のご期待に応えてまいります。今後とも関西貿易株式会社をよろしくお願い申し上げます。</p>
+                <div class="ceo-name">代表取締役　西脇 健治</div>
+            </div>
+
+            <div class="overview-container">
+                <span class="section-label">OVERVIEW</span>
+                <h3 class="section-title">企業情報</h3>
+                <table class="company-table">
+                    <tr><th>会社名</th><td>関西貿易 株式会社</td></tr>
+                    <tr><th>代表者</th><td>代表取締役 西脇 健治</td></tr>
+                    <tr><th>所在地</th><td>〒569-0844 大阪府高槻市柱本4丁目25-1</td></tr>
+                    <tr><th>設立</th><td>平成20年8月28日</td></tr>
+                    <tr><th>資本金</th><td>500万円</td></tr>
+                    <tr><th>従業員数</th><td>15名</td></tr>
+                    <tr><th>許可・登録</th><td>古物商許可（大阪府公安委員会）ほか</td></tr>
+                    <tr><th>主要取引銀行</th><td>北おおさか信用金庫</td></tr>
+                    <tr><th>連絡先</th><td>TEL：072-668-2355 / FAX：072-668-2345</td></tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="address-box">
+            <p class="location">〒569-0844　大阪府高槻市柱本4丁目25-1</p>
+            <div class="contact-group">
+                <p><span class="label">TEL：</span>072-668-2355　<span class="label">FAX：</span>072-668-2345</p>
+            </div>
+            <p class="copyright">&copy; 2026 KANSAI TRADING Co., Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
