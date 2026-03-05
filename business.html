@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>業務内容 | 関西貿易 株式会社</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 会社概要のスタイルを継承 */
+        body {
+            overflow: auto;
+            background-color: #fff;
+            margin: 0;
+        }
+        
+        /* ヒーローエリア（company.htmlと統一） */
+        .page-hero {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+            background: #000;
+        }
+        .page-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 60px;
+        }
+
+        /* 見出し装飾：Studio En オマージュ（緑の正方形） */
+        .section-title-area {
+            text-align: center;
+            margin-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* company.htmlのsection-labelを継承 */
+        .section-label {
+            color: #28a745;
+            font-weight: 700;
+            letter-spacing: 0.4em;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+            letter-spacing: 0.1em;
+            position: relative;
+            padding-left: 40px;
+            display: inline-block;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            background-color: #28a745;
+            border-radius: 2px;
+        }
+
+        .service-intro {
+            line-height: 2.4;
+            font-size: 1.1rem;
+            color: #444;
+            text-align: center;
+            max-width: 800px;
+            margin: -30px auto 100px;
+        }
+
+        /* 写真ギャラリー：ご要望の3列固定レイアウト */
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 120px;
+        }
+        .item-box {
+            position: relative;
+            height: 380px;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #f0f0f0;
+        }
+        .item-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .item-box:hover img {
+            transform: scale(1.05);
+        }
+        .item-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* 買取相談カード */
+        .price-info-card {
+            background: #f4fbf5;
+            border: 2px solid #28a745;
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 100px;
+        }
+        .tel-display {
+            display: block;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            color: #28a745;
+            text-decoration: none;
+            margin: 30px 0;
+        }
+        .business-hours {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: bold;
+        }
+
+        /* 下層用フッター（company.htmlと完全に同一のスタイル） */
+        .page-footer {
+            background: #111;
+            padding: 80px 60px;
+            color: #fff;
+            text-align: center;
+        }
+        .page-footer .address-box {
+            text-align: center;
+            text-shadow: none;
+        }
+        .page-footer .location {
+            margin-bottom: 10px;
+        }
+        .page-footer .contact-group p {
+            margin: 5px 0;
+        }
+        .page-footer .copyright {
+            margin-top: 40px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+        }
+
+        /* レスポンシブ調整 */
+        @media screen and (max-width: 768px) {
+            .container { padding: 60px 20px; }
+            .items-grid { grid-template-columns: 1fr; gap: 20px; }
+            .item-box { height: 300px; }
+            .section-title { font-size: 1.8rem; padding-left: 30px; }
+            .section-title::before { width: 14px; height: 14px; }
+            .page-footer { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>関西貿易 株式会社</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-en="HOME">ホーム</a></li>
+                <li><a href="company.html" data-en="COMPANY">会社概要</a></li>
+                <li><a href="business.html" data-en="BUSINESS">業務内容</a></li>
+                <li><a href="contact.html" data-en="CONTACT">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-hero">
+            <div class="overlay"></div>
+            <img src="S__51380265_0.jpg" alt="関西貿易 業務内容">
+            <div class="main-copy">
+                <span class="en-title">BUSINESS</span>
+                <h2>業務内容</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-title-area">
+                <span class="section-label">GALLERY</span>
+                <h3 class="section-title">取扱品目ギャラリー</h3>
+            </div>
+
+            <p class="service-intro">
+                家電、OA機器から大型の業務用設備、楽器、自転車まで。<br>
+                幅広い品目を取り扱い、市場相場に基づいた公正な査定をお約束します。
+            </p>
+
+            <div class="items-grid">
+                <div class="item-box"><img src="S__51380265_0.jpg" alt="PC"><div class="item-caption">ノートPC・サーバー</div></div>
+                <div class="item-box"><img src="S__51380254_0.jpg" alt="プリンター"><div class="item-caption">プリンター・複合機</div></div>
+                <div class="item-box"><img src="S__51380242_0.jpg" alt="電子楽器"><div class="item-caption">シンセサイザー類</div></div>
+                <div class="item-box"><img src="S__51380249_0.jpg" alt="ギター"><div class="item-caption">アコースティックギター</div></div>
+                <div class="item-box"><img src="S__51380262_0.jpg" alt="スピーカー"><div class="item-caption">大型スピーカー</div></div>
+                <div class="item-box"><img src="S__51380255_0.jpg" alt="空気清浄機"><div class="item-caption">空気清浄機・生活家電</div></div>
+                <div class="item-box"><img src="S__51380257_0.jpg" alt="ストーブ"><div class="item-caption">石油ストーブ</div></div>
+                <div class="item-box"><img src="S__51380244_0.jpg" alt="業務用ミシン"><div class="item-caption">業務用ミシン（大量買取）</div></div>
+                <div class="item-box"><img src="S__51380266_0.jpg" alt="ミシン"><div class="item-caption">家庭用・工業用ミシン</div></div>
+                <div class="item-box"><img src="S__51380267_0.jpg" alt="自転車"><div class="item-caption">自転車（輸出用）</div></div>
+            </div>
+
+            <div class="price-info-card">
+                <h3 class="section-title" style="margin-bottom: 30px;">買取のご相談</h3>
+                <p>「これ売れるかな？」と思ったら、まずはお気軽にご相談ください。</p>
+                <a href="tel:0726682355" class="tel-display">072-668-2355</a>
+                <p class="business-hours">受付時間：8:30〜17:30（定休日：日曜日）</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="address-box">
+            <p class="location">〒569-0844　大阪府高槻市柱本4丁目25-1</p>
+            <div class="contact-group">
+                <p><span class="label">TEL：</span>072-668-2355　<span class="label">FAX：</span>072-668-2345</p>
+            </div>
+            <p class="copyright">&copy; 2026 KANSAI TRADING Co., Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

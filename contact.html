@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 関西貿易 株式会社</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        /* デザインは前回の company.html 準拠を維持 */
+        body { overflow: auto; background-color: #fff; margin: 0; }
+        .page-hero { position: relative; width: 100%; height: 60vh; overflow: hidden; background: #000; }
+        .page-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
+        .section-label { color: #28a745; font-weight: 700; letter-spacing: 0.4em; display: block; margin-bottom: 15px; font-size: 1.1rem; text-align: center; }
+        .section-title { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 60px; color: #333; }
+
+        .contact-wrapper { display: flex; gap: 50px; align-items: flex-start; margin-bottom: 100px; }
+        .staff-visual { flex: 1; position: sticky; top: 20px; }
+        .staff-visual img { width: 100%; border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .staff-msg { margin-top: 20px; padding: 20px; background: #f4fbf5; border-left: 4px solid #28a745; font-size: 0.95rem; line-height: 1.8; }
+
+        .form-area { flex: 1.5; background: #fff; }
+        .contact-form { background: #f9f9f9; padding: 40px; border-radius: 4px; }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 10px; font-size: 0.9rem; }
+        .form-group label span { background: #28a745; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 2px; margin-left: 10px; }
+        .form-control { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; box-sizing: border-box; }
+        
+        /* reCAPTCHA配置用 */
+        .recaptcha-group { margin-bottom: 25px; display: flex; justify-content: center; }
+
+        .submit-btn { background: #28a745; color: #fff; border: none; padding: 20px 0; width: 100%; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: 0.3s; border-radius: 4px; }
+        .submit-btn:hover { background: #218838; }
+
+        .tel-info { text-align: center; padding: 60px; background: #f4fbf5; border-radius: 8px; margin-top: 50px; }
+        .tel-number { font-size: 3rem; font-weight: 900; color: #28a745; text-decoration: none; display: block; margin: 20px 0; }
+
+        /* 共通フッター */
+        .page-footer { background: #111; padding: 80px 60px; color: #fff; text-align: center; }
+        .page-footer .address-box { text-align: center; }
+        .page-footer .copyright { margin-top: 40px; font-size: 0.7rem; opacity: 0.5; }
+
+        @media screen and (max-width: 900px) {
+            .contact-wrapper { flex-direction: column; }
+            .container { padding: 60px 20px; }
+            .staff-visual { position: static; order: 2; }
+            .form-area { order: 1; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h1>関西貿易 株式会社</h1></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-en="HOME">ホーム</a></li>
+                <li><a href="company.html" data-en="COMPANY">会社概要</a></li>
+                <li><a href="business.html" data-en="BUSINESS">業務内容</a></li>
+                <li><a href="contact.html" data-en="CONTACT">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-hero">
+            <div class="overlay"></div>
+            <img src="S__51380242_0.jpg" alt="関西貿易 お問い合わせ">
+            <div class="main-copy">
+                <span class="en-title">CONTACT</span>
+                <h2>お問い合わせ</h2>
+            </div>
+        </div>
+
+        <section class="container">
+            <span class="section-label">INQUIRY FORM</span>
+            <h3 class="section-title">ご相談・査定依頼</h3>
+
+            <div class="contact-wrapper">
+                <div class="staff-visual">
+                    <img src="staff.jpg" alt="カスタマーサポート">
+                    <div class="staff-msg">
+                        <p><strong>迅速・丁寧にお答えします</strong></p>
+                        <p>大量の在庫処分や、特殊な機械の買取相談など、どんなことでもお気軽にお送りください。</p>
+                    </div>
+                </div>
+
+                <div class="form-area">
+                    <form class="contact-form" action="mail.php" method="POST">
+                        <div class="form-group">
+                            <label>貴社名</label>
+                            <input type="text" class="form-control" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label>お名前<span>必須</span></label>
+                            <input type="text" class="form-control" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>メールアドレス<span>必須</span></label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>お問い合わせ内容<span>必須</span></label>
+                            <textarea class="form-control" name="message" required></textarea>
+                        </div>
+
+                        <div class="recaptcha-group">
+                            <div class="g-recaptcha" data-sitekey="6LcYG YasAAAAAIND64YNZ4MEurqln6UKtxX2GYpV"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">内容を確認して送信する</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tel-info">
+                <h4>お電話でのお問い合わせ</h4>
+                <a href="tel:0726682355" class="tel-number">072-668-2355</a>
+                <p>受付時間：8:30〜17:30（定休日：日曜日）</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="address-box">
+            <p class="location">〒569-0844　大阪府高槻市柱本4丁目25-1</p>
+            <div class="contact-group">
+                <p><span class="label">TEL：</span>072-668-2355　<span class="label">FAX：</span>072-668-2345</p>
+            </div>
+            <p class="copyright">&copy; 2026 KANSAI TRADING Co., Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
